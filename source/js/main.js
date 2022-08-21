@@ -1,24 +1,24 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {iosVhFix} from './utils/ios-vh-fix';
+// import {initModals} from './modules/modals/init-modals';
 
-// ---------------------------------
+// // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
+//   // Utils
+//   // ---------------------------------
 
-  iosVhFix();
+//   iosVhFix();
 
-  // Modules
-  // ---------------------------------
+//   // Modules
+//   // ---------------------------------
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
-});
+//   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+//   // в load следует добавить скрипты, не участвующие в работе первого экрана
+//   window.addEventListener('load', () => {
+//     initModals();
+//   });
+// });
 
 // ---------------------------------
 

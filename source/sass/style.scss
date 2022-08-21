@@ -9,17 +9,13 @@
 // ---------------------------------
 
 @import "variables";
-@import "mixins";
 @import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@import "global/global";
+@import "blocks/page-header";
+@import "blocks/contacts";
 
 // Blocks
 // ---------------------------------
-
-@import "blocks/btn";
-@import "blocks/modal";
 
 // ---------------------------------
 
