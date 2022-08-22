@@ -11,10 +11,12 @@ $color-default-white:               #ffffff;
 $color-alice-blue: #f2f5f6;
 $color-black-pearl: #041827;
 $color-deep-sky-blue: #00b2ff;
+$color-shark: #192024;
 
 // Gradient
 
 $color-black-pearl-to-bottom:                    linear-gradient($color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+$color-shark-to-bottom:                          linear-gradient(rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 
 // Typography
 // ---------------------------------
