@@ -1,0 +1,9 @@
+.page-body__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page-body__content {
+  flex: 1 0 auto;
+}

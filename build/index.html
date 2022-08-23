@@ -28,7 +28,7 @@
                 </svg>
                 <span>info@sd.ru</span>
               </a>
-              <a class="contacts__phone" href="tel:74950005252" >
+              <a class="contacts__phone" href="tel:74950005252">
                 <svg width="20" height="20">
                   <use xlink:href="img/sprite_auto.svg#phone-call-icon"></use>
                 </svg>
@@ -50,8 +50,127 @@
             </div>
           </header>
 
+          <!-- Преимущества -->
+
+          <section class="advantages">
+            <div class="advantages__wrapper">
+              <h2 class="visually-hidden">Преимущества</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <svg width="35" height="35">
+                    <use xlink:href="img/sprite_auto.svg#stopwatch-icon"></use>
+                  </svg>
+                  <h3>Оперативные сроки</h3>
+                  <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+                    доставлять заказы плат и комплектующих в самые короткие сроки.</p>
+                </li>
+                <li class="advantages__item">
+                  <svg width="35" height="35">
+                    <use xlink:href="img/sprite_auto.svg#hired-icon"></use>
+                  </svg>
+                  <h3>Крупные поставщики</h3>
+                  <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                    Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+                </li>
+                <li class="advantages__item">
+                  <svg width="35" height="35">
+                    <use xlink:href="img/sprite_auto.svg#detective-icon"></use>
+                  </svg>
+                  <h3>Полная конфиденциальность</h3>
+                  <p>По желанию клиента мы обеспечиваем полную конфиденциальность.</p>
+                </li>
+                <li class="advantages__item">
+                  <svg width="35" height="35">
+                    <use xlink:href="img/sprite_auto.svg#tag-icon"></use>
+                  </svg>
+                  <h3>Персонализация стоимости</h3>
+                  <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                    устраивает.</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- О компании -->
+
+          <section class="about-company"></section>
+          <div class="about-company__wrapper">
+            <h2>О компании</h2>
+            <picture>
+              <source type="image/webp" srcset="img/year.webp 1x, img/year@2x.webp 2x">
+              <!-- 1х: 150x320px; 2x: 300x640px -->
+              <img src="img/year.png" srcset="img/year@2x.jpg 2x" width="150" height="320" alt="#">
+            </picture>
+
+            <!-- is-expand - разворачивает полное описание-->
+
+            <div class="about-company__description">
+              <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
+                1997
+                года.
+                Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+              <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+                REFOND.<span>Печатные
+                  платы
+                  и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
+                  (ВАЗ,
+                  АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
+                  России.</span></p>
+              <div class="about-company__additional">
+                <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
+                  продолжают
+                  сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов
+                  присутствия.</p>
+                <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
+                  Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+              </div>
+            </div>
+            <button class="about-company__button" type="button">
+              <span>Подробнее</span>
+              <span>Свернуть</span>
+            </button>
+          </div>
+
+          <!-- Каталог -->
+
+          <section class="catalog">
+            <div class="catalog__wrapper">
+              <h2>Smart Device предлагает следующие товары и услуги</h2>
+              <ul class="catalog__list"></ul>
+            </div>
+          </section>
+
+          <!-- Форма обратной связи -->
+
+          <section class="feedback-form"></section>
         </main>
       </div>
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="#">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
+              <img src="img/svg/logo.svg" width="215" height="55" alt="#">
+            </picture>
+          </a>
+
+          <!-- Социальные сети -->
+
+          <ul class="page-footer__socials socials"></ul>
+
+          <!-- Навигация по сайту -->
+
+          <section class="page-footer__navigation">
+            <h2>Разделы сайта</h3>
+          </section>
+
+          <!-- Контакты -->
+
+          <section class="page-footer__contacts">
+            <h2>Наш офис</h2>
+          </section>
+        </div>
+      </footer>
     </div>
     <script src="js/main.min.js"></script>
   </body>

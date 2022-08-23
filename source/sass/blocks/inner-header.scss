@@ -27,19 +27,20 @@
 }
 
 .inner-header__wrapper {
-  padding: 305px 0;
+  padding: 305px 0 280px;
   margin: 0 auto;
   box-sizing: border-box;
   min-width: 890px;
   max-width: #{"min(50.5%, 970px)"};
 
   @media (max-width: $vp-1023) {
-    padding: 180px 0;
+    padding: 180px 0 205px;
     min-width: 650px;
     max-width: #{"min(87%, 670px)"};
   }
 
   @media (max-width: $vp-767) {
+    padding: 150px 0 190px;
     min-width: 270px;
     max-width: #{"min(85%, 500px)"};
   }
