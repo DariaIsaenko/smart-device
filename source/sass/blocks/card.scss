@@ -1,0 +1,32 @@
+.card h3 {
+  position: relative;
+  padding-right: 40px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  z-index: 3;
+  color: $color-default-white;
+
+  @media (max-width: $vp-1023) {
+    max-width: 230px;
+    font-size: 18px;
+  }
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+
+  @media (max-width: $vp-1023) {
+    height: 250px;
+  }
+}
