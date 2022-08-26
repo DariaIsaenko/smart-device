@@ -1,0 +1,106 @@
+.feedback--background {
+  position: relative;
+  width: 100%;
+  min-height: 840px;
+  box-sizing: border-box;
+  background: url("../img/bg-form@2x.webp");
+  background-repeat: no-repeat;
+  background-position: 40% 57%;
+  background-color: $color-deep-sky-blue;
+
+  @media (max-width: $vp-1023) {
+    min-height: 580px;
+    background: $color-deep-sky-blue;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 163px 0 244px;
+  margin: 0 auto;
+  max-width: #{"min(95%, 1210px)"};
+  min-height: 840px;
+
+  @media (max-width: $vp-1023) {
+    padding: 50px 0 125px;
+    width: 100%;
+    max-width: #{"min(87%, 1000px)"};
+    min-height: 580px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 50px 0 90px;
+    min-width: 270px;
+    max-width: #{"min(84%, 760px)"};
+    min-height: 750px;
+  }
+}
+
+.feedback__wrapper img {
+  position: relative;
+  margin-right: 15px;
+  z-index: 1;
+
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}
+
+.feedback__form-wrapper {
+  max-width: #{"min(47.9%, 580px)"};
+
+  @media (max-width: $vp-1023) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.feedback__form-wrapper h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50.63px;
+  color: $color-default-white;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42.19px;
+  }
+}
+
+.feedback__form-wrapper p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.5px;
+  color: $color-default-white;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 18.82px;
+  }
+}
+
+.feedback__form {
+  display: grid;
+}

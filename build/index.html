@@ -182,9 +182,40 @@
 
           <!-- Форма обратной связи -->
 
-          <section class="feedback-form"></section>
+          <section class="feedback feedback--background">
+            <div class="feedback__wrapper">
+              <h2 class="visually-hidden">Форма обратной связи.</h2>
+              <picture>
+                <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
+                <!-- 1х: 510x285px; 2x: 1020x570px -->
+                <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="#">
+              </picture>
+              <div class="feedback__form-wrapper">
+                <h3>Остались вопросы? Задайте их нам!</h3>
+                <p>Мы проконсультируем Вас бесплатно</p>
+                <form class="feedback__form form" action="https://echo.htmlacademy.ru/">
+                  <div class="form__personal-data">
+                    <label class="visually-hidden" for="form-name">name</label>
+                    <input id="form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
+                    <label class="visually-hidden" for="form-phone">phone</label>
+                    <input id="form-phone" type="tel" placeholder="Телефон" pattern="[0-9]{1,10}" name="phone" required>
+                  </div>
+                  <div class="form__question">
+                    <label class="visually-hidden" for="form-question">question</label>
+                    <textarea id="form-question" placeholder="Ваш вопрос" name="question"></textarea>
+                  </div>
+                  <div class="form__checkbox">
+                    <input class="visually-hidden" id="form-checkbox" type="checkbox" name="agree" required checked>
+                    <label for="form-checkbox">Я согласен на обработку персональных данных</label>
+                  </div>
+                  <button class="form__button" type="submit">Задать вопрос</button>
+                </form>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
+
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
@@ -196,18 +227,71 @@
 
           <!-- Социальные сети -->
 
-          <ul class="page-footer__socials socials"></ul>
+          <div class="page-footer__socials socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link social__link--pinterest" href="#" aria-label="Страница компании Smart Device в Facebook.">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite_auto.svg#pinterest-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link social__link--odnoklassniki" href="#" aria-label="Страница компании Smart Device в Facebook.">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite_auto.svg#odnoklassniki-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link social__link--vkontakte" href="#" aria-label="Страница компании Smart Device в Facebook.">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite_auto.svg#vkontakte-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <!-- Навигация по сайту -->
 
-          <section class="page-footer__navigation">
+          <section class="page-footer__navigation navigation">
             <h2>Разделы сайта</h3>
+              <ul class="navigation__list">
+                <li class="navigation__item">О Компаниии</li>
+                <li class="navigation__item">Продукты</li>
+                <li class="navigation__item">Производство печатных плат</li>
+                <li class="navigation__item">Монтаж печатных плат</li>
+                <li class="navigation__item">Комплектующие</li>
+                <li class="navigation__item">Доставка</li>
+                <li class="navigation__item">Контакты</li>
+              </ul>
           </section>
 
           <!-- Контакты -->
 
-          <section class="page-footer__contacts">
+          <section class="page-footer__contacts contacts">
             <h2>Наш офис</h2>
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <div class="contacts__phone">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__phone" href="tel:+74955894050">
+                    <span>+7 (495) 589-40-50</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__phone" href="tel:+79253895829">
+                    <span>+7 (925) 389-58-29</span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__phone" href="tel:+79253647813">
+                    <span>+7 (925) 364-78-13</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
       </footer>
