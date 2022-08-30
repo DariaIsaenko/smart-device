@@ -1,0 +1,19 @@
+.button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.92px;
+  border-radius: 3px;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+}

@@ -2,10 +2,30 @@
   display: none;
 }
 
+.modal.is-opened {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: $color-black-pearl-overlay-transparent;
+}
+
 .modal__wrapper {
   padding: 40px;
   width: 500px;
-  height: 610px;
+  min-height: 610px;
   display: grid;
   box-sizing: border-box;
   background-color: $color-deep-sky-blue;
@@ -45,10 +65,15 @@
   }
 }
 
+.modal.is-opened .modal__wrapper {
+  position: relative;
+  margin: 145px auto auto;
+}
+
 .modal__wrapper h3 {
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 1px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -62,7 +87,7 @@
 .modal__wrapper p {
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;

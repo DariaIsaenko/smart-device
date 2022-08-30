@@ -8,6 +8,7 @@
 
 .page-header__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: border-box;
   margin: auto;
@@ -25,6 +26,17 @@
   }
 }
 
+.page-header__logo {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+}
+
 .page-header__logo img {
   @media (max-width: $vp-767) {
     width: 35px;
@@ -32,14 +44,20 @@
   }
 }
 
-.page-header__contacts {
+.page-header__list {
   display: flex;
   justify-content: space-between;
+  align-self: center;
   flex-wrap: wrap;
   width: 41.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 12px 8px;
+  list-style: none;
 
   @media (max-width: $vp-1023) {
-    width: 15%;
+    padding: 0;
+    width: 17%;
   }
 
   @media (max-width: $vp-767) {
@@ -49,9 +67,9 @@
 }
 
 .page-header__button {
-  align-self: center;
+  align-self: baseline;
   width: 160px;
-  height: 40px;
+  min-height: 40px;
   padding: 10px 15px;
   margin-right: 60px;
   box-sizing: border-box;
@@ -64,6 +82,7 @@
   color: $color-alice-blue;
   background-color: transparent;
   border: 1px solid $color-alice-blue;
+  letter-spacing: 0.6px;
   border-radius: 3px;
 
   @media (max-width: $vp-1023) {

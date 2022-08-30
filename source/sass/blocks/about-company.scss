@@ -1,19 +1,19 @@
 .about-company__wrapper {
   position: relative;
   box-sizing: border-box;
-  padding: 0 0 100px 250px;
+  padding: 0 0 122px 250px;
   margin: 0 auto;
   min-width: 770px;
   max-width: #{"min(83.7%, 1222px)"};
 
   @media (max-width: $vp-1023) {
-    padding: 0 0 80px 179px;
+    padding: 0 0 84px 179px;
     min-width: 674px;
     max-width: #{"min(87.5%, 1222px)"};
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 0 80px;
+    padding: 0 0 79px;
     min-width: 270px;
     max-width: #{"min(84%, 760px)"};
   }
@@ -29,9 +29,9 @@
   }
 }
 
-.about-company__wrapper h2 {
+.about-company .about-company__wrapper h2 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -49,32 +49,12 @@
   margin-bottom: 40px;
 
   @media (max-width: $vp-1023) {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 }
-
-.about-company__description span {
-  @media (max-width: $vp-767) {
-    display: none;
-  }
-}
-
-.about-company__additional {
-  display: none;
-}
-
-.about-company__description.is-expand .about-company__additional {
-  display: block;
-}
-
-.about-company__description.is-expand span {
-  @media (max-width: $vp-767) {
-    display: block;
-  }
-}
-
 
 .about-company__description p {
+  margin: 0 0 20px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -88,40 +68,66 @@
   }
 }
 
+.about-company__description p:nth-child(n+2) {
+  @media (max-width: $vp-1023) {
+    margin-bottom: 0;
+  }
+}
+
+.about-company__description span {
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.about-company__additional {
+  display: none;
+}
+
+.about-company__description.is-expand {
+  .about-company__additional {
+    display: block;
+  }
+
+  span {
+    @media (max-width: $vp-767) {
+      display: block;
+    }
+  }
+}
+
 .about-company__button {
   box-sizing: border-box;
   margin: 0;
   padding: 14px 13px 8px 12px;
   width: 180px;
-  height: 45px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+  min-height: 45px;
   line-height: 16.41px;
-  text-transform: uppercase;
   color: $color-deep-sky-blue;
   background-color: transparent;
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
 
+  span:nth-last-child(1) {
+    display: none;
+  }
+
+  @media (max-width: $vp-1023) {
+    padding: 13px 13px 15px 12px;
+    letter-spacing: 0.6px;
+  }
+
   @media (max-width: $vp-767) {
     padding: 8px 15px 12px;
     width: 160px;
-    height: 35px;
+    min-height: 35px;
   }
 }
 
-.about-company__button span:nth-last-child(1) {
+.about-company__description.is-expand + .about-company__button span:nth-child(1) {
   display: none;
 }
 
-.about-company__description.is-expand +
-.about-company__button span:nth-child(1) {
-  display: none;
-}
-
-.about-company__description.is-expand +
-.about-company__button span:nth-last-child(1) {
+.about-company__description.is-expand + .about-company__button span:nth-last-child(1) {
   display: block;
 }

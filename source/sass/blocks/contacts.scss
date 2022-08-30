@@ -1,15 +1,28 @@
+.contacts__item {
+  margin-right: 5px;
+}
+
 .contacts__email {
   position: relative;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   padding: 10px;
-  margin-right: 5px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 17.92px;
   color: $color-alice-blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__email span {
@@ -42,18 +55,28 @@
   font-size: 16px;
   line-height: 17.92px;
   color: $color-alice-blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__phone svg {
   margin-right: 15px;
 
   @media (max-width: $vp-1023) {
-    transform: translate(-3px, -10px);
+    transform: translate(-13px, -10px);
     margin-right: 0;
   }
 
   @media (max-width: $vp-767) {
-    transform: translate(-8px, -6px);
+    transform: translate(-4px, -6px);
   }
 }
 

@@ -1,48 +1,25 @@
 // Colors
-// ---------------------------------
 
-// Default
-
-$color-default-white:               #ffffff;
-
-// Project palette
-
+$color-default-white: #ffffff;
 $color-alice-blue: #f2f5f6;
 $color-black-pearl: #041827;
+$color-black-pearl-overlay: #03101b;
+$color-black-pearl-bg: #192024;
 $color-deep-sky-blue: #00b2ff;
-$color-shark: #192024;
 $color-whisper: #ebebeb;
 $color-silver: #c4c4c4;
 $color-alice-blue-transparent: rgba(248, 253, 255, 0.7);
-$color-deep-sky-blue-transparent:   rgba(4, 24, 39, 0.15);
+$color-deep-sky-blue-transparent: rgba(4, 24, 39, 0.15);
 $color-default-white-transparent: rgba(255, 255, 255, 0.6);
 $color-default-white-transparent-link: rgba(255, 255, 255, 0.7);
-
+$color-black-pearl-overlay-transparent: rgba(3, 16, 27, 0.7);
 
 // Gradient
 
-$color-black-pearl-to-bottom:                    linear-gradient($color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
-$color-shark-to-bottom:                          linear-gradient(rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
-
-// Typography
-// ---------------------------------
-
-// переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
-
-// Animation
-// ---------------------------------
-
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600:                         0.6s $tf-default;
+$color-black-pearl-to-bottom: linear-gradient($color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+$color-black-pearl-bg-to-bottom: linear-gradient(rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 
 // Viewports
-// ---------------------------------
 
-$vp-767:                            767px;
-$vp-1023:                           1023px;
+$vp-767: 767px;
+$vp-1023: 1023px;

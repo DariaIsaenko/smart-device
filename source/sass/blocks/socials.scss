@@ -13,7 +13,13 @@
 }
 
 .socials__logo {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
 
   @media (max-width: $vp-767) {
     margin-bottom: 20px;
@@ -26,10 +32,33 @@
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 15px;
+
+  @media (max-width: $vp-1023) {
+    gap: 10px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0 auto;
+  }
+}
+
+.socials__item svg {
+  @media (max-width: $vp-1023) {
+    transform: translate(10px, 4px);
+  }
+
+  @media (max-width: $vp-767) {
+    transform: translate(3px, -11px);
+  }
 }
 
 .socials__link {
-  padding: 5px;
+  padding: 5px 8px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+    outline: none;
+  }
 }

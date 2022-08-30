@@ -5,13 +5,13 @@
   max-width: #{"min(83.7%, 1222px)"};
 
   @media (max-width: $vp-1023) {
-    padding: 80px 0;
+    padding: 80px 0 77px;
     min-width: 670px;
     max-width: #{"min(87%, 1222px)"};
   }
 
   @media (max-width: $vp-767) {
-    padding: 50px 0;
+    padding: 50px 0 48px;
     min-width: 270px;
     max-width: #{"min(84%, 760px)"};
   }
@@ -36,28 +36,47 @@
 
 
 .advantages__item {
-  padding: 40px 45px 35px;
+  padding: 40px 40px 35px;
+  min-height: 300px;
   box-sizing: border-box;
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
 
+  &:hover {
+    background-color: $color-deep-sky-blue;
+  }
+
   @media (max-width: $vp-1023) {
-    padding: 40px 30px 35px 45px;
+    min-height: 360px;
+    padding: 40px 30px 31px 40px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 30px 30px 35px;
+    &:nth-child(n + 3) {
+      min-height: 325px;
+    }
+
+    min-height: 340px;
+    padding: 29px 30px 36px 25px;
   }
 }
 
 .advantages__item svg {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   fill: $color-deep-sky-blue;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 5px;
+  }
 }
 
 .advantages__item h3 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -66,12 +85,19 @@
   color: $color-deep-sky-blue;
 
   @media (max-width: $vp-1023) {
+    margin-bottom: 9px;
     line-height: 33.75px;
   }
 
   @media (max-width: $vp-767) {
     font-size: 20px;
     line-height: 28.13px;
+  }
+}
+
+.advantages__item:nth-child(n + 3) h3 {
+  @media (max-width: $vp-767) {
+    margin-bottom: 16px;
   }
 }
 
@@ -83,11 +109,17 @@
   line-height: 21.6px;
   color: $color-black-pearl;
 
-  @media (max-width: $vp-1023) {
-  }
-
   @media (max-width: $vp-767) {
     font-size: 14px;
     line-height: 18.9px;
   }
+}
+
+.advantages__item:hover svg {
+  fill: $color-alice-blue;
+}
+
+.advantages__item:hover h3,
+.advantages__item:hover p {
+  color: $color-alice-blue;
 }
