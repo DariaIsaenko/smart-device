@@ -53,6 +53,7 @@
     "duplicate-package-checker-webpack-plugin": "3.0.0"
   },
   "dependencies": {
+    "imask": "^6.4.2",
     "jquery": "^3.6.1",
     "jquery-mask-plugin": "^1.14.16"
   }

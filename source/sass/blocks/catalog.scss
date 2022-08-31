@@ -87,7 +87,6 @@
 .catalog__item {
   position: relative;
   justify-self: center;
-  max-width: 350px;
   max-width: #{"min(100%, 350px)"};
   margin-right: 20px;
   height: 650px;

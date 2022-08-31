@@ -1,6 +1,11 @@
-import './vendor/jquery-3.6.1';
-import './vendor/jquery.mask';
+import iMask from 'imask';
 
-// $(document).ready(function(){
-//   $('#form-phone').mask('+7(000)000-000');
-// });
+const phoneInput = document.getElementById('form-phone');
+const phoneModalInput = document.getElementById('modal-form-phone');
+
+const maskOptions = {
+  mask: '+{7}(000)000-00-00',
+};
+
+iMask(phoneInput, maskOptions);
+iMask(phoneModalInput, maskOptions);

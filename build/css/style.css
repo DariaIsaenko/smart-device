@@ -906,7 +906,6 @@ a {
   position: relative;
   -ms-grid-column-align: center;
   justify-self: center;
-  max-width: 350px;
   max-width: min(100%, 350px);
   margin-right: 20px;
   height: 650px;
@@ -1358,8 +1357,6 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -ms-grid;
-  display: grid;
   max-height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
