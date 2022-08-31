@@ -41,15 +41,26 @@ innerHeaderButton.addEventListener('click', (evt) => {
 
 // Попап обратной связи
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+const onModalEscKeydown = (evt) => {
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    closeModal();
+  }
+};
+
 function openModal() {
   body.classList.add('is-locked');
   modal.classList.add('is-opened');
+  document.addEventListener('keydown', onModalEscKeydown);
   inputName.focus();
 }
 
 function closeModal() {
   body.classList.remove('is-locked');
   modal.classList.remove('is-opened');
+  document.removeEventListener('keydown', onModalEscKeydown);
 }
 
 openModalButton.addEventListener('click', () => {

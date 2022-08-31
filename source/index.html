@@ -335,7 +335,7 @@
       <div class="modal__overlay"></div>
       <div class="modal__wrapper">
         <h3>Закажите звонок</h3>
-        <button class="modal__close-button btn-reset" type="button" aria-label="Закрыть попап" ></button>
+        <button class="modal__close-button button" type="button" aria-label="Закрыть попап" ></button>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время.</p>
         <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/">
           <div class="modal-form__personal-data">
@@ -357,14 +357,22 @@
       </div>
     </div>
 
+
     <script src="js/vendor.min.js"></script>
-    <!-- <script type="text/javascript">
-      (function($) {
-        $(function(){
-          $('#form-phone').mask('+7(000)000-000');
-        });
-      });</script> -->
     <script src="js/main.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        if (window.jQuery) {
+        alert('jQuery is loaded');
+        } else {
+        alert('jQuery is not loaded');
+        }}</script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function(){
+        $('#form-phone').mask('+7(000)000-000');
+      });
+    </script> -->
+
 
   </body>
 </html>

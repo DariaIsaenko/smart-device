@@ -115,6 +115,8 @@
   padding: 50px 80px 50px 40px;
   height: 100%;
   box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
 
   &::before {
     position: absolute;

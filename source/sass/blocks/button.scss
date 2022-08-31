@@ -6,6 +6,8 @@
   line-height: 17.92px;
   border-radius: 3px;
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
 
   &:hover {
     opacity: 0.6;
