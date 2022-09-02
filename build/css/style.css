@@ -484,7 +484,7 @@ a {
   min-height: 100%;
 }
 
-.page-body__content {
+.page-body__wrapper .page-header + .main {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -712,10 +712,6 @@ a {
   border-radius: 3px;
 }
 
-.inner-header__button span:last-child {
-  display: none;
-}
-
 .advantages__wrapper {
   padding: 120px 0;
   margin: 0 auto;
@@ -808,11 +804,7 @@ a {
   color: #041827;
 }
 
-.about-company__description {
-  margin-bottom: 40px;
-}
-
-.about-company__description p {
+.about-company__wrapper p {
   margin: 0 0 20px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
@@ -822,11 +814,15 @@ a {
   color: #041827;
 }
 
+.about-company__wrapper p:nth-of-type(n+2) {
+  margin-bottom: 40px;
+}
+
 .about-company__additional {
   display: none;
 }
 
-.about-company__description.is-expand .about-company__additional {
+.about-company__wrapper.is-expand .about-company__additional {
   display: block;
 }
 
@@ -848,11 +844,11 @@ a {
   display: none;
 }
 
-.about-company__description.is-expand + .about-company__button span:nth-child(1) {
+.about-company__wrapper.is-expand + .about-company__button span:nth-of-type(1) {
   display: none;
 }
 
-.about-company__description.is-expand + .about-company__button span:nth-last-child(1) {
+.about-company__wrapper.is-expand + .about-company__button span:nth-last-of-type(1) {
   display: block;
 }
 
@@ -870,23 +866,15 @@ a {
   min-height: 960px;
 }
 
-.catalog__title {
+.catalog__wrapper h2 {
   margin: 0 auto 50px;
   max-width: min(97%, 1220px);
-}
-
-.catalog__title h2 {
-  margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 50.63px;
   color: #ffffff;
-}
-
-.catalog__title h2:nth-last-child(1) {
-  display: none;
 }
 
 .catalog__list {
@@ -1027,7 +1015,7 @@ a {
 }
 
 .feedback__form-wrapper {
-  max-width: min(49.1%, 586px);
+  max-width: min(49.1%, 585px);
 }
 
 .feedback__form-wrapper h3 {
@@ -1057,25 +1045,16 @@ a {
 .feedback__form {
   display: -ms-grid;
   display: grid;
-}
-
-.form__personal-data {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 20px;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
+  row-gap: 20px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
 }
 
-.form__personal-data input {
-  padding: 15px;
+.form input {
+  padding: 11px 15px 15px;
   height: 50px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1085,14 +1064,14 @@ a {
   border-radius: 3px;
 }
 
-.form__personal-data input:hover,
-.form__personal-data input:focus {
+.form input:hover,
+.form input:focus {
   -webkit-box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 0.6);
   box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 0.6);
   outline: none;
 }
 
-.form__personal-data input::-webkit-input-placeholder {
+.form input::-webkit-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1101,7 +1080,7 @@ a {
   color: #ffffff;
 }
 
-.form__personal-data input::-moz-placeholder {
+.form input::-moz-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1110,7 +1089,7 @@ a {
   color: #ffffff;
 }
 
-.form__personal-data input:-ms-input-placeholder {
+.form input:-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1119,7 +1098,7 @@ a {
   color: #ffffff;
 }
 
-.form__personal-data input::-ms-input-placeholder {
+.form input::-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1128,7 +1107,7 @@ a {
   color: #ffffff;
 }
 
-.form__personal-data input::placeholder {
+.form input::placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1137,18 +1116,15 @@ a {
   color: #ffffff;
 }
 
-.form__question {
-  margin-bottom: 28px;
+.form textarea {
+  margin-bottom: 13px;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
-}
-
-.form__question textarea {
-  padding: 25px 15px;
+  padding: 23px 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -1159,14 +1135,14 @@ a {
   border-radius: 3px;
 }
 
-.form__question textarea:hover,
-.form__question textarea:focus {
+.form textarea:hover,
+.form textarea:focus {
   -webkit-box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 0.6);
   box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 0.6);
   outline: none;
 }
 
-.form__question textarea::-webkit-input-placeholder {
+.form textarea::-webkit-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1175,7 +1151,7 @@ a {
   color: #ffffff;
 }
 
-.form__question textarea::-moz-placeholder {
+.form textarea::-moz-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1184,7 +1160,7 @@ a {
   color: #ffffff;
 }
 
-.form__question textarea:-ms-input-placeholder {
+.form textarea:-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1193,7 +1169,7 @@ a {
   color: #ffffff;
 }
 
-.form__question textarea::-ms-input-placeholder {
+.form textarea::-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1202,7 +1178,7 @@ a {
   color: #ffffff;
 }
 
-.form__question textarea::placeholder {
+.form textarea::placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1213,7 +1189,6 @@ a {
 
 .form__button {
   padding: 14px 25px 12px;
-  margin-right: 50px;
   width: 265px;
   min-height: 45px;
   -ms-grid-row: 3;
@@ -1224,6 +1199,7 @@ a {
   grid-column: 1 / 2;
   font-size: 16px;
   line-height: 18.75px;
+  letter-spacing: 0.7px;
   background-color: #041827;
   border: none;
   color: #ffffff;
@@ -1235,6 +1211,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   align-self: flex-end;
+  margin-left: 8px;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
@@ -1939,17 +1916,13 @@ a {
   }
 
   .about-company__wrapper {
-    padding: 0 0 84px 179px;
+    padding: 0 0 80px 179px;
     min-width: 674px;
     max-width: min(87.5%, 1222px);
   }
 
-  .about-company__description {
-    margin-bottom: 11px;
-  }
-
-  .about-company__description p:nth-child(n+2) {
-    margin-bottom: 0;
+  .about-company__wrapper p:nth-of-type(n+2) {
+    margin-bottom: 20px;
   }
 
   .about-company__button {
@@ -1964,7 +1937,7 @@ a {
     min-height: 1080px;
   }
 
-  .catalog__title {
+  .catalog__wrapper h2 {
     margin-bottom: 35px;
     max-width: 100%;
   }
@@ -2024,24 +1997,25 @@ a {
   }
 
   .feedback__form-wrapper h3 {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 
   .feedback__form-wrapper p {
     margin-bottom: 25px;
   }
 
-  .form__personal-data {
-    margin-bottom: 19px;
+  .feedback__form {
+    row-gap: 19px;
   }
 
-  .form__personal-data input {
+  .form input {
     padding: 14px 16px 16px;
   }
 
-  .form__question textarea {
+  .form textarea {
+    padding: 33px 15px 23px;
+    margin-bottom: 15px;
     min-height: 155px;
-    padding: 28px 15px;
   }
 
   .form__button {
@@ -2053,6 +2027,7 @@ a {
   }
 
   .form__checkbox {
+    margin-left: 0;
     max-width: 280px;
   }
 
@@ -2208,14 +2183,6 @@ a {
     line-height: 16.41px;
   }
 
-  .inner-header__button span:first-child {
-    display: none;
-  }
-
-  .inner-header__button span:last-child {
-    display: block;
-  }
-
   .advantages__wrapper {
     padding: 50px 0 48px;
     min-width: 270px;
@@ -2269,16 +2236,20 @@ a {
     line-height: 39.38px;
   }
 
-  .about-company__description p {
+  .about-company__wrapper p {
     font-size: 14px;
     line-height: 18.82px;
   }
 
-  .about-company__description span {
+  .about-company__wrapper p:nth-of-type(n+2) {
+    margin-bottom: 10px;
+  }
+
+  .about-company__wrapper p span:first-child {
     display: none;
   }
 
-  .about-company__description.is-expand span {
+  .about-company__wrapper.is-expand p span {
     display: block;
   }
 
@@ -2295,21 +2266,10 @@ a {
     min-height: 1040px;
   }
 
-  .catalog__title {
+  .catalog__wrapper h2 {
     margin-bottom: 28px;
-  }
-
-  .catalog__title h2 {
     font-size: 28px;
     line-height: 39.38px;
-  }
-
-  .catalog__title h2:first-child {
-    display: none;
-  }
-
-  .catalog__title h2:nth-last-child(1) {
-    display: block;
   }
 
   .catalog__item {
@@ -2332,7 +2292,7 @@ a {
   }
 
   .feedback__wrapper {
-    padding: 45px 0 90px;
+    padding: 46px 0 90px;
     min-width: 270px;
     max-width: min(84%, 760px);
     min-height: 750px;
@@ -2350,44 +2310,42 @@ a {
     line-height: 18.82px;
   }
 
-  .form__personal-data {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .form__question {
-    margin-bottom: 25px;
-  }
-
-  .form__question textarea {
-    padding: 25px 15px;
-  }
-
-  .form__button {
-    margin-bottom: 25px;
+  .feedback__form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     width: 100%;
+  }
+
+  .form textarea {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
+    padding: 25px 15px;
+    min-height: 180px;
   }
 
-  .form__checkbox {
-    max-width: 330px;
+  .form__button {
+    margin-bottom: 0;
+    width: 100%;
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / 5;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+
+  .form__checkbox {
+    max-width: 330px;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
   }
 
   .form__checkbox label::before {

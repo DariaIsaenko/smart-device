@@ -32,7 +32,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 45px 0 90px;
+    padding: 46px 0 90px;
     min-width: 270px;
     max-width: #{"min(84%, 760px)"};
     min-height: 750px;
@@ -54,7 +54,7 @@
 }
 
 .feedback__form-wrapper {
-  max-width: #{"min(49.1%, 586px)"};
+  max-width: #{"min(49.1%, 585px)"};
 
   @media (max-width: $vp-1023) {
     max-width: 100%;
@@ -74,7 +74,7 @@
   color: $color-default-white;
 
   @media (max-width: $vp-1023) {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 
   @media (max-width: $vp-767) {
@@ -108,4 +108,16 @@
 
 .feedback__form {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 30px;
+
+  @media (max-width: $vp-1023) {
+    row-gap: 19px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }

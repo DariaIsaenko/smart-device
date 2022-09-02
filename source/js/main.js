@@ -1,5 +1,5 @@
 const aboutCompanyButton = document.querySelector('.about-company__button');
-const aboutCompanyDescription = document.querySelector('.about-company__description');
+const aboutCompanyDescription = document.querySelector('.about-company__wrapper');
 const innerHeaderButton = document.querySelector('.inner-header__button');
 const openModalButton = document.querySelector('.page-header__button');
 const modal = document.querySelector('.modal');
@@ -12,6 +12,22 @@ const navigationToggle = document.querySelector('.navigation__toggle');
 const contactsToggle = document.querySelector('.footer-contacts__toggle');
 const navigation = document.querySelector('.navigation');
 const footerContacts = document.querySelector('.footer-contacts');
+
+const catalogTitle = document.querySelector('.catalog__wrapper').querySelector('h2');
+const catalogTitleInitial = document.querySelector('.catalog__wrapper').querySelector('h2').textContent;
+const headerButton = document.querySelector('.inner-header__button').querySelector('span');
+const headerButtonInitial = document.querySelector('.inner-header__button').querySelector('span').textContent;
+const mobileVersion = window.matchMedia('(max-width: 767px)');
+
+window.addEventListener('resize', () => {
+  if (mobileVersion.matches) {
+    catalogTitle.textContent = catalogTitle.dataset.mobileVersion;
+    headerButton.textContent = headerButton.dataset.mobileVersion;
+  } else {
+    catalogTitle.textContent = catalogTitleInitial;
+    headerButton.textContent = headerButtonInitial;
+  }
+});
 
 // Развернуть описание в блоке "О компании"
 

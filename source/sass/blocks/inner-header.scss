@@ -120,17 +120,3 @@
     line-height: 16.41px;
   }
 }
-
-.inner-header__button span:first-child {
-  @media (max-width: $vp-767) {
-    display: none;
-  }
-}
-
-.inner-header__button span:last-child {
-  display: none;
-
-  @media (max-width: $vp-767) {
-    display: block;
-  }
-}
