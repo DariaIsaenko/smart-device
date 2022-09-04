@@ -1,23 +1,24 @@
+import {initModals} from './modal/init-modal';
+
 const aboutCompanyButton = document.querySelector('.about-company__button');
 const aboutCompanyDescription = document.querySelector('.about-company__wrapper');
 const innerHeaderButton = document.querySelector('.inner-header__button');
-const openModalButton = document.querySelector('.page-header__button');
-const modal = document.querySelector('.modal');
-const closeModalButton = document.querySelector('.modal__close-button');
-const modalOverlay = document.querySelector('.modal__overlay');
-const body = document.querySelector('.page-body');
-const inputName = document.getElementById('modal-form-name');
 const footerAccordion = document.querySelectorAll('.footer-accordion');
 const navigationToggle = document.querySelector('.navigation__toggle');
 const contactsToggle = document.querySelector('.footer-contacts__toggle');
 const navigation = document.querySelector('.navigation');
 const footerContacts = document.querySelector('.footer-contacts');
-
 const catalogTitle = document.querySelector('.catalog__wrapper').querySelector('h2');
 const catalogTitleInitial = document.querySelector('.catalog__wrapper').querySelector('h2').textContent;
 const headerButton = document.querySelector('.inner-header__button').querySelector('span');
 const headerButtonInitial = document.querySelector('.inner-header__button').querySelector('span').textContent;
 const mobileVersion = window.matchMedia('(max-width: 767px)');
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initModals();
+  });
+});
 
 window.addEventListener('resize', () => {
   if (mobileVersion.matches) {
@@ -55,43 +56,6 @@ innerHeaderButton.addEventListener('click', (evt) => {
   getSmoothScrolling(document.getElementById('feedback'));
 });
 
-// Попап обратной связи
-
-const isEscapeKey = (evt) => evt.key === 'Escape';
-
-const onModalEscKeydown = (evt) => {
-  if (isEscapeKey(evt)) {
-    evt.preventDefault();
-    closeModal();
-  }
-};
-
-function openModal() {
-  body.classList.add('is-locked');
-  modal.classList.add('is-opened');
-  document.addEventListener('keydown', onModalEscKeydown);
-  inputName.focus();
-}
-
-function closeModal() {
-  body.classList.remove('is-locked');
-  modal.classList.remove('is-opened');
-  document.removeEventListener('keydown', onModalEscKeydown);
-}
-
-openModalButton.addEventListener('click', () => {
-  openModal();
-});
-
-closeModalButton.addEventListener('click', () => {
-  closeModal();
-});
-
-modalOverlay.addEventListener('click', () => {
-  body.classList.remove('is-locked');
-  modal.classList.remove('is-opened');
-});
-
 // Аккордеон
 
 navigation.classList.remove('is-nojs');
@@ -124,51 +88,3 @@ contactsToggle.addEventListener('click', () => {
     closeAccordeon(footerContacts);
   }
 });
-
-// closeModalButton.addEventListener('click', () => {
-//   closeModal();
-// });
-
-// // ---------------------------------
-
-// window.addEventListener('DOMContentLoaded', () => {
-
-//   // Utils
-//   // ---------------------------------
-
-//   iosVhFix();
-
-//   // Modules
-//   // ---------------------------------
-
-//   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-//   // в load следует добавить скрипты, не участвующие в работе первого экрана
-//   window.addEventListener('load', () => {
-//     initModals();
-//   });
-// });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

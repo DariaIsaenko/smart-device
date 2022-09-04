@@ -10,9 +10,6 @@
     <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-
-  <!-- is-locked для блокировки скролла-->
-
   <body class="page__body page-body">
     <div class="page-body__wrapper">
       <header class="page-header page-header--background">
@@ -41,7 +38,7 @@
               </a>
             </li>
           </ul>
-          <button class="page-header__button button" type="button">Заказать звонок</button>
+          <button class="page-header__button button" data-open-modal="feedback" type="button">Заказать звонок</button>
         </div>
       </header>
       <main class="main">
@@ -196,12 +193,10 @@
               <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <form class="feedback__form form" action="https://echo.htmlacademy.ru/">
-                <!-- <div class="form__personal-data"> -->
                 <label class="visually-hidden" for="form-name">name</label>
                 <input id="form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
                 <label class="visually-hidden" for="form-phone">phone</label>
-                <input id="form-phone" type="tel" placeholder="Телефон" pattern="[0-9]{1,10}" name="phone" required>
-                <!-- </div> -->
+                <input id="form-phone" type="tel" placeholder="Телефон" name="phone" required>
                 <label class="visually-hidden" for="form-question">question</label>
                 <textarea id="form-question" placeholder="Ваш вопрос" name="question"></textarea>
                 <div class="form__checkbox">
@@ -331,18 +326,18 @@
 
     <!-- модификатор is-opened для открытого состояния -->
 
-    <div class="modal">
-      <div class="modal__overlay"></div>
+    <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__overlay" data-close-modal></div>
       <div class="modal__wrapper">
         <h3>Закажите звонок</h3>
-        <button class="modal__close-button button" type="button" aria-label="Закрыть попап"></button>
+        <button class="modal__close-button button" type="button" data-close-modal aria-label="Закрыть попап"></button>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время.</p>
         <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/">
           <div class="modal-form__personal-data">
             <label class="visually-hidden" for="modal-form-name">name</label>
-            <input id="modal-form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
+            <input id="modal-form-name" data-focus type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
             <label class="visually-hidden" for="modal-form-phone">phone</label>
-            <input id="modal-form-phone" type="tel" placeholder="Телефон" pattern="[0-9]{1,10}" name="phone" required>
+            <input id="modal-form-phone" type="tel" placeholder="Телефон" name="phone" required>
           </div>
           <div class="modal-form__question">
             <label class="visually-hidden" for="modal-form-question">question</label>

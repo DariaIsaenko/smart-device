@@ -443,6 +443,19 @@ a {
   overflow: hidden;
 }
 
+.scroll-lock-ios {
+  position: fixed;
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
 .button {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -474,6 +487,7 @@ a {
 }
 
 .page-body__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

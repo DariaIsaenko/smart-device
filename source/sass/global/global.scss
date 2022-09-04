@@ -31,3 +31,17 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
