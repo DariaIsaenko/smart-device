@@ -10,8 +10,8 @@ const navigation = document.querySelector('.navigation');
 const footerContacts = document.querySelector('.footer-contacts');
 const catalogTitle = document.querySelector('.catalog__wrapper').querySelector('h2');
 const catalogTitleInitial = document.querySelector('.catalog__wrapper').querySelector('h2').textContent;
-const headerButton = document.querySelector('.inner-header__button').querySelector('span');
-const headerButtonInitial = document.querySelector('.inner-header__button').querySelector('span').textContent;
+const headerButton = document.querySelector('.inner-header__button');
+const headerButtonInitial = document.querySelector('.inner-header__button').textContent;
 const mobileVersion = window.matchMedia('(max-width: 767px)');
 
 window.addEventListener('DOMContentLoaded', () => {
