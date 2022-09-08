@@ -14,7 +14,7 @@
     <div class="page-body__wrapper">
       <header class="page-header page-header--background">
         <div class="page-header__wrapper">
-          <a class="page-header__logo" href="#">
+          <a class="page-header__logo" href="#" tabindex="-1">
             <picture>
               <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
               <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип-ссылка на главную страницу.">
@@ -139,37 +139,65 @@
               <li class="catalog__item">
                 <a class="catalog__link card" href="#">
                   <h3>Производство печатных плат</h3>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/pcb-bg-catalog-1.webp 1x, img/catalog/pcb-bg-catalog-1@2x.webp 2x">
-                    <!-- 1х: 350x650px; 2x: 700x1300px -->
-                    <img src="img/catalog/pcb-bg-catalog-1.jpg" srcset="img/catalog/pcb-bg-catalog-1@2x.jpg 2x" width="350"
-                      height="650" alt="Печатная плата.">
-                  </picture>
+                  <div class="card__img">
+                    <!-- <picture> -->
+                      <source type="image/webp"
+                        srcset="img/catalog/pcb-bg-catalog-desktop-1.webp 1x, img/catalog/pcb-bg-catalog-desktop-1@2x.webp 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-1.webp 1x, img/catalog/pcb-bg-catalog-desktop-1@2x.webp 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-1.webp 1x, img/catalog/pcb-bg-catalog-tablet-1@2x.webp 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-1.webp 1x, img/catalog/pcb-bg-catalog-mobile-1@2x.webp 2x">
+                      <!-- 1х: 350x650px; 2x: 700x1300px -->
+                      <img src="img/catalog/pcb-bg-catalog-desktop-1.jpg" data-src-mobile="img/catalog/pcb-bg-catalog-mobile-1.jpg"
+                        data-src-tablet="img/catalog/pcb-bg-catalog-tablet-1.jpg"
+                        data-src-desktop="img/catalog/pcb-bg-catalog-desktop-1.jpg"
+                        srcset="img/catalog/pcb-bg-catalog-desktop-1@2x.jpg 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-1@2x.jpg 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-1@2x.jpg 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-1@2x.jpg 2x" width="350" height="650" alt="Печатная плата.">
+                    <!-- </picture> -->
+                  </div>
                 </a>
               </li>
               <li class="catalog__item">
                 <a class="catalog__link card" href="#">
                   <h3>Монтаж печатных плат</h3>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/pcb-bg-catalog-2.webp 1x, img/catalog/pcb-bg-catalog-2@2x.webp 2x">
-                    <!-- 1х: 350x650px; 2x: 700x1300px -->
-                    <img src="img/catalog/pcb-bg-catalog-2.jpg" srcset="img/catalog/pcb-bg-catalog-2@2x.jpg 2x" width="350"
-                      height="650" alt="Печатная плата.">
-                  </picture>
+                  <div class="card__img">
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/pcb-bg-catalog-desktop-2.webp 1x, img/catalog/pcb-bg-catalog-desktop-2@2x.webp 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-2.webp 1x, img/catalog/pcb-bg-catalog-desktop-2@2x.webp 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-2.webp 1x, img/catalog/pcb-bg-catalog-tablet-2@2x.webp 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-2.webp 1x, img/catalog/pcb-bg-catalog-mobile-2@2x.webp 2x">
+                      <!-- 1х: 350x650px; 2x: 700x1300px -->
+                      <img src="img/catalog/pcb-bg-catalog-desktop-2.jpg" data-src-mobile="img/catalog/pcb-bg-catalog-mobile-2.jpg"
+                        data-src-tablet="img/catalog/pcb-bg-catalog-tablet-2.jpg"
+                        data-src-desktop="img/catalog/pcb-bg-catalog-desktop-2.jpg"
+                        srcset="img/catalog/pcb-bg-catalog-desktop-2@2x.jpg 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-2@2x.jpg 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-2@2x.jpg 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-2@2x.jpg 2x" width="350" height="650" alt="Печатная плата.">
+                    </picture>
+                  </div>
                 </a>
               </li>
               <li class="catalog__item">
                 <a class="catalog__link card" href="#">
                   <h3>Комплектующие для светотехники</h3>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/pcb-bg-catalog-3.webp 1x, img/catalog/pcb-bg-catalog-3@2x.webp 2x">
-                    <!-- 1х: 350x650px; 2x: 700x1300px -->
-                    <img src="img/catalog/pcb-bg-catalog-3.jpg" srcset="img/catalog/pcb-bg-catalog-3@2x.jpg 2x" width="350"
-                      height="650" alt="Печатная плата.">
-                  </picture>
+                  <div class="card__img">
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/pcb-bg-catalog-desktop-3.webp 1x, img/catalog/pcb-bg-catalog-desktop-3@2x.webp 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-3.webp 1x, img/catalog/pcb-bg-catalog-desktop-3@2x.webp 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-3.webp 1x, img/catalog/pcb-bg-catalog-tablet-3@2x.webp 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-3.webp 1x, img/catalog/pcb-bg-catalog-mobile-3@2x.webp 2x">
+                      <!-- 1х: 350x650px; 2x: 700x1300px -->
+                      <img src="img/catalog/pcb-bg-catalog-desktop-3.jpg" data-src-mobile="img/catalog/pcb-bg-catalog-mobile-3.jpg"
+                        data-src-tablet="img/catalog/pcb-bg-catalog-tablet-3.jpg" srcset="img/catalog/pcb-bg-catalog-desktop-3@2x.jpg 2x"
+                        data-srcset-desktop="img/catalog/pcb-bg-catalog-desktop-3@2x.jpg 2x"
+                        data-srcset-tablet="img/catalog/pcb-bg-catalog-tablet-3@2x.jpg 2x"
+                        data-srcset-mobile="img/catalog/pcb-bg-catalog-mobile-3@2x.jpg 2x" width="350" height="650" alt="Печатная плата.">
+                    </picture>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -194,9 +222,9 @@
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <form class="feedback__form form" action="https://echo.htmlacademy.ru/">
                 <label class="visually-hidden" for="form-name">name</label>
-                <input id="form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
+                <input id="form-name" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?{1,}" name="name" required>
                 <label class="visually-hidden" for="form-phone">phone</label>
-                <input id="form-phone" type="tel" placeholder="Телефон" name="phone" required>
+                <input id="form-phone" type="tel" placeholder="Телефон" name="phone" pattern="^\+?[7]\s{0,1}[\(]\d{3}[\)]\s{0,1}\d{3}[\-]\d{2}[\-]\d{2}" required>
                 <label class="visually-hidden" for="form-question">question</label>
                 <textarea id="form-question" placeholder="Ваш вопрос" name="question"></textarea>
                 <div class="form__checkbox">
@@ -218,7 +246,7 @@
           <section class="page-footer__socials socials">
             <h2 class="visually-hidden">Социальные сети</h2>
             <div class="socials__wrapper">
-              <a class="socials__logo" href="#">
+              <a class="socials__logo" href="#" tabindex="-1">
                 <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип-ссылка на главную страницу.">
               </a>
               <ul class="socials__list">
@@ -268,7 +296,7 @@
                   <a class="navigation__link" href="#catalog">Продукты</a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">Производство печатных<br>плат</a>
+                  <a class="navigation__link" href="#">Производство печатных плат</a>
                 </li>
                 <li class="navigation__item">
                   <a class="navigation__link" href="#">Монтаж печатных плат</a>
@@ -335,9 +363,9 @@
         <form class="modal__form modal-form" action="https://echo.htmlacademy.ru/">
           <div class="modal-form__personal-data">
             <label class="visually-hidden" for="modal-form-name">name</label>
-            <input id="modal-form-name" data-focus type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="name" required>
+            <input id="modal-form-name" data-focus type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?{1,}" name="name" required>
             <label class="visually-hidden" for="modal-form-phone">phone</label>
-            <input id="modal-form-phone" type="tel" placeholder="Телефон" name="phone" required>
+            <input id="modal-form-phone" type="tel" placeholder="Телефон" name="phone" pattern="^\+?[7]\s{0,1}[\(]\d{3}[\)]\s{0,1}\d{3}[\-]\d{2}[\-]\d{2}" required>
           </div>
           <div class="modal-form__question">
             <label class="visually-hidden" for="modal-form-question">question</label>

@@ -1,6 +1,15 @@
 import {ScrollLock} from '../utils/scroll-lock';
 import {FocusLock} from '../utils/focus-lock';
 
+function resizeOverlay() {
+  const modal = document.querySelector('.modal');
+  const overlay = document.querySelector('.modal__overlay');
+
+  if (modal.scrollHeight !== overlay.offsetHeight) {
+    overlay.style.height = modal.scrollHeight + 'px';
+  }
+}
+
 export class Modals {
   constructor(settings = {}) {
     this._scrollLock = new ScrollLock();
@@ -75,6 +84,9 @@ export class Modals {
     }
 
     this.open();
+
+    resizeOverlay();
+    window.addEventListener('resize', resizeOverlay);
   }
 
   _documentKeydownHandler(evt) {
@@ -104,6 +116,7 @@ export class Modals {
   _removeListeners(modal) {
     modal.removeEventListener('click', this._modalClickHandler);
     document.removeEventListener('keydown', this._documentKeydownHandler);
+    window.removeEventListener('resize', resizeOverlay);
   }
 
   open(modalName = this._modalName) {

@@ -17,14 +17,25 @@
   }
 }
 
-.card img {
+.card__img {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 650px;
+
+  @media (max-width: $vp-1023) {
+    min-height: 250px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-height: 270px;
+  }
+}
+
+.card__img img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  @media (max-width: $vp-1023) {
-    height: 250px;
-  }
 }

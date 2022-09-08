@@ -4,6 +4,10 @@
   min-width: 320px;
   z-index: 10;
   background: $color-black-pearl-to-bottom;
+
+  @media (max-width: $vp-1023) {
+    position: absolute;
+  }
 }
 
 .page-header__wrapper {
@@ -27,17 +31,7 @@
 }
 
 .page-header__logo {
-  cursor: pointer;
   user-select: none;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus {
-    opacity: 0.6;
-    outline: none;
-  }
 }
 
 .page-header__logo img {
@@ -52,6 +46,7 @@
   justify-content: space-between;
   align-self: center;
   flex-wrap: wrap;
+  min-width: 430px;
   width: 41.5%;
   box-sizing: border-box;
   margin: 0;
@@ -60,6 +55,7 @@
 
   @media (max-width: $vp-1023) {
     padding: 0;
+    min-width: 0;
     width: 17%;
   }
 

@@ -14,14 +14,7 @@
 
 .socials__logo {
   margin-bottom: 25px;
-  cursor: pointer;
   user-select: none;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-    outline: none;
-  }
 
   @media (max-width: $vp-767) {
     margin-bottom: 20px;
@@ -34,6 +27,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 
   @media (max-width: $vp-1023) {
@@ -57,6 +51,18 @@
 
 .socials__link {
   padding: 5px 8px;
+
+  &--pinterest svg {
+    transform: translate(6px, -3px);
+  }
+
+  &--odnoklassniki svg {
+    transform: translate(1px, -3px);
+  }
+
+  &--vkontakte svg {
+    transform: translate(-5px, -3px);
+  }
 
   &:hover,
   &:focus {

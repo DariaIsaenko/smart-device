@@ -54,7 +54,7 @@
 }
 
 .feedback__form-wrapper {
-  max-width: #{"min(49.1%, 585px)"};
+  max-width: #{"min(51%, 585px)"};
 
   @media (max-width: $vp-1023) {
     max-width: 100%;
@@ -65,7 +65,7 @@
 .feedback__form-wrapper h3 {
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;

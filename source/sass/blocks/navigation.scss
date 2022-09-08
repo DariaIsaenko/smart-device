@@ -1,10 +1,13 @@
 .navigation__wrapper {
+  position: relative;
+  transform: translateX(35px);
   box-sizing: border-box;
-  padding: 6px 0 0 30px;
+  padding: 4px 0 0 0;
   min-width: 400px;
 
 
   @media (max-width: $vp-1023) {
+    transform: translateX(0);
     padding: 6px 0 0;
     min-width: 220px;
   }
@@ -20,7 +23,7 @@
 .navigation__wrapper h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -31,7 +34,7 @@
   color: $color-default-white;
 
   @media (max-width: $vp-1023) {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   @media (max-width: $vp-767) {
@@ -47,15 +50,13 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  max-height: 150px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  column-gap: 26px;
-  overflow: auto;
+  column-count: 2;
+  column-width: 220px;
 
   @media (max-width: $vp-1023) {
     max-height: 100%;
+    column-count: 1;
+    column-width: auto;
   }
 
   @media (max-width: $vp-767) {
@@ -138,7 +139,6 @@
     background-color: $color-silver;
   }
 }
-
 
 @media (max-width: $vp-767) {
   .navigation.is-closed .navigation__wrapper .navigation__list {

@@ -7,7 +7,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 8px 0 9px;
+    padding: 10px 0 9px;
     margin: 0 auto;
     display: grid;
     max-width: #{"min(84%, 718px)"};
@@ -138,7 +138,6 @@
     background-color: $color-silver;
   }
 }
-
 
 @media (max-width: $vp-767) {
   .footer-contacts.is-closed .footer-contacts__wrapper .footer-contacts__contacts {

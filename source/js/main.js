@@ -4,23 +4,49 @@ const aboutCompanyButton = document.querySelector('.about-company__button');
 const aboutCompanyDescription = document.querySelector('.about-company__wrapper');
 const innerHeaderButton = document.querySelector('.inner-header__button');
 const footerAccordion = document.querySelectorAll('.footer-accordion');
+const navigationTab = document.querySelector('.navigation__wrapper').querySelector('h2');
 const navigationToggle = document.querySelector('.navigation__toggle');
 const contactsToggle = document.querySelector('.footer-contacts__toggle');
 const navigation = document.querySelector('.navigation');
 const footerContacts = document.querySelector('.footer-contacts');
+const footerContactsTab = document.querySelector('.footer-contacts__wrapper').querySelector('h2');
 const catalogTitle = document.querySelector('.catalog__wrapper').querySelector('h2');
 const catalogTitleInitial = document.querySelector('.catalog__wrapper').querySelector('h2').textContent;
 const headerButton = document.querySelector('.inner-header__button');
 const headerButtonInitial = document.querySelector('.inner-header__button').textContent;
 const mobileVersion = window.matchMedia('(max-width: 767px)');
+const tabletVersion = window.matchMedia('(max-width: 1023px)');
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
+    showImgs();
   });
 });
 
+function showImgs() {
+  document.querySelectorAll('.card__img').forEach((element) => showImg(element));
+}
+
+function showImg(element) {
+  if (mobileVersion.matches) {
+    element.querySelector('img').src = element.querySelector('img').dataset.srcMobile;
+    element.querySelector('img').srcset = element.querySelector('img').dataset.srcsetMobile;
+    element.querySelector('source').srcset = element.querySelector('source').dataset.srcsetMobile;
+  } else if (tabletVersion.matches) {
+    element.querySelector('img').src = element.querySelector('img').dataset.srcTablet;
+    element.querySelector('img').srcset = element.querySelector('img').dataset.srcsetTablet;
+    element.querySelector('source').srcset = element.querySelector('source').dataset.srcsetTablet;
+  } else {
+    element.querySelector('img').src = element.querySelector('img').dataset.srcDesktop;
+    element.querySelector('img').srcset = element.querySelector('img').dataset.srcsetDesktop;
+    element.querySelector('source').srcset = element.querySelector('source').dataset.srcsetDesktop;
+  }
+}
+
 window.addEventListener('resize', () => {
+  showImgs();
+
   if (mobileVersion.matches) {
     catalogTitle.textContent = catalogTitle.dataset.mobileVersion;
     headerButton.textContent = headerButton.dataset.mobileVersion;
@@ -61,30 +87,37 @@ innerHeaderButton.addEventListener('click', (evt) => {
 navigation.classList.remove('is-nojs');
 footerContacts.classList.remove('is-nojs');
 
-function openAccordeon(element) {
+function openTabAccordeon(element) {
   element.classList.remove('is-closed');
   element.classList.add('is-opened');
 }
 
-function closeAccordeon(element) {
+function closeTabAccordeon(element) {
   element.classList.remove('is-opened');
   element.classList.add('is-closed');
 }
 
-navigationToggle.addEventListener('click', () => {
-  if (navigation.classList.contains('is-closed')) {
-    footerAccordion.forEach((element) => closeAccordeon(element));
-    openAccordeon(navigation);
+function openOneTab(element) {
+  if (element.classList.contains('is-closed')) {
+    footerAccordion.forEach((accordionElement) => closeTabAccordeon(accordionElement));
+    openTabAccordeon(element);
   } else {
-    closeAccordeon(navigation);
+    closeTabAccordeon(element);
   }
+}
+
+navigationToggle.addEventListener('click', () => {
+  openOneTab(navigation);
+});
+
+navigationTab.addEventListener('click', () => {
+  openOneTab(navigation);
 });
 
 contactsToggle.addEventListener('click', () => {
-  if (footerContacts.classList.contains('is-closed')) {
-    footerAccordion.forEach((element) => closeAccordeon(element));
-    openAccordeon(footerContacts);
-  } else {
-    closeAccordeon(footerContacts);
-  }
+  openOneTab(footerContacts);
+});
+
+footerContactsTab.addEventListener('click', () => {
+  openOneTab(footerContacts);
 });

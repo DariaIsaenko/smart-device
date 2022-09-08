@@ -16,12 +16,26 @@
 
   @media (max-width: $vp-1023) {
     min-height: 640px;
-    background: $color-black-pearl-bg-to-bottom, url("../img/main-background-tablet@2x.webp");
+    background: $color-black-pearl-bg-to-bottom, url("../img/main-background-tablet.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-black-pearl-bg-to-bottom, url("../img/main-background-tablet@2x.webp");
+    }
   }
 
   @media (max-width: $vp-767) {
     min-height: 560px;
-    background: $color-black-pearl-bg-to-bottom, url("../img/main-background-mobile@2x.webp");
+    background: $color-black-pearl-bg-to-bottom, url("../img/main-background-mobile.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-black-pearl-bg-to-bottom, url("../img/main-background-mobile@2x.webp");
+    }
   }
 }
 
@@ -64,7 +78,7 @@
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 36px;
     line-height: 42.19px;
     letter-spacing: 2.8px;

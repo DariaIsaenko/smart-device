@@ -4,10 +4,10 @@
 
 .catalog__wrapper {
   box-sizing: border-box;
-  padding: 69px 0 141px;
+  padding: 68px 0 144px;
   margin: 0 auto;
   min-width: 770px;
-  max-width: #{"min(92%, 1285px)"};
+  max-width: #{"min(92%, 1220px)"};
   min-height: 960px;
 
   @media (max-width: $vp-1023) {
@@ -27,7 +27,6 @@
 
 .catalog__wrapper h2 {
   margin: 0 auto 50px;
-  max-width: #{"min(97%, 1220px)"};
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -48,10 +47,8 @@
 }
 
 .catalog__list {
-  display: grid;
+  display: flex;
   justify-content: space-between;
-  row-gap: 85px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
@@ -65,15 +62,9 @@
 
 .catalog__item {
   position: relative;
-  justify-self: center;
-  max-width: #{"min(100%, 350px)"};
-  margin-right: 20px;
+  max-width: #{"min(30%, 350px)"};
   height: 650px;
   box-sizing: border-box;
-
-  &:nth-last-child(1) {
-    margin-right: 0;
-  }
 
   @media (max-width: $vp-1023) {
     margin-right: 0;
@@ -90,7 +81,8 @@
 
 .catalog__link {
   position: relative;
-  padding: 50px 80px 50px 40px;
+  padding: 49px 80px 50px 40px;
+  max-width: #{"min(100%, 350px)"};
   height: 100%;
   box-sizing: border-box;
   cursor: pointer;
@@ -127,8 +119,8 @@
   }
 
   @media (max-width: $vp-1023) {
+    max-width: 100%;
     padding: 40px 45px;
-    width: 100%;
   }
 
   @media (max-width: $vp-767) {
