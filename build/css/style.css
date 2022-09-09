@@ -2446,7 +2446,7 @@ a {
   }
 
   .navigation__wrapper {
-    padding: 7px 0 8px;
+    padding: 0;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
@@ -2454,6 +2454,7 @@ a {
   }
 
   .navigation__wrapper h2 {
+    padding: 21px 0 22px;
     margin-bottom: 0;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -2499,7 +2500,7 @@ a {
     -ms-grid-column-align: end;
     justify-self: end;
     width: 100%;
-    padding: 22px 22px;
+    padding: 29px 0 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -2515,7 +2516,7 @@ a {
   .navigation.is-closed .navigation__wrapper .navigation__toggle::after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;
@@ -2531,7 +2532,7 @@ a {
   .navigation.is-opened .navigation__wrapper .navigation__toggle::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;
@@ -2560,7 +2561,7 @@ a {
   }
 
   .footer-contacts__wrapper {
-    padding: 10px 0 9px;
+    padding: 0;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
@@ -2568,6 +2569,7 @@ a {
   }
 
   .footer-contacts__wrapper h2 {
+    padding: 22px 0 21px;
     margin-bottom: 0;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -2597,7 +2599,7 @@ a {
   }
 
   .footer-contacts__contacts p {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     max-width: 270px;
     font-size: 14px;
     line-height: 18.9px;
@@ -2620,7 +2622,7 @@ a {
     -ms-grid-column-align: end;
     justify-self: end;
     width: 100%;
-    padding: 22px 22px;
+    padding: 29px 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -2636,7 +2638,7 @@ a {
   .footer-contacts.is-closed .footer-contacts__wrapper .footer-contacts__toggle::after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;
@@ -2652,7 +2654,7 @@ a {
   .footer-contacts.is-opened .footer-contacts__wrapper .footer-contacts__toggle::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;
@@ -2695,7 +2697,7 @@ a {
   }
 
   .page-footer__socials {
-    margin-bottom: 7px;
+    margin-bottom: 11px;
   }
 
   .page-footer__navigation {

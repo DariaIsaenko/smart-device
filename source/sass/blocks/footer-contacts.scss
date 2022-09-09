@@ -7,7 +7,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 10px 0 9px;
+    padding: 0;
     margin: 0 auto;
     display: grid;
     max-width: #{"min(84%, 718px)"};
@@ -28,6 +28,7 @@
   color: $color-default-white;
 
   @media (max-width: $vp-767) {
+    padding: 22px 0 21px;
     margin-bottom: 0;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -62,7 +63,7 @@
   color: $color-default-white-transparent-link;
 
   @media (max-width: $vp-767) {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     max-width: 270px;
     font-size: 14px;
     line-height: 18.9px;
@@ -108,7 +109,7 @@
     display: block;
     justify-self: end;
     width: 100%;
-    padding: 22px 22px;
+    padding: 29px 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -127,7 +128,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 28px;
       right: 0;
       width: 15px;
       height: 1px;
@@ -144,7 +145,7 @@
   @media (max-width: $vp-767) {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;

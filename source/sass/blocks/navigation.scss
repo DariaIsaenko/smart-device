@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 7px 0 8px;
+    padding: 0;
     margin: 0 auto;
     display: grid;
     max-width: #{"min(84%, 718px)"};
@@ -38,6 +38,7 @@
   }
 
   @media (max-width: $vp-767) {
+    padding: 21px 0 22px;
     margin-bottom: 0;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -109,7 +110,7 @@
     display: block;
     justify-self: end;
     width: 100%;
-    padding: 22px 22px;
+    padding: 29px 0 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -128,7 +129,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 28px;
       right: 0;
       width: 15px;
       height: 1px;
@@ -145,7 +146,7 @@
   @media (max-width: $vp-767) {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 0;
     width: 15px;
     height: 1px;
