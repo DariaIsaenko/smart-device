@@ -1,9 +1,9 @@
 .navigation__wrapper {
   position: relative;
-  transform: translateX(35px);
   box-sizing: border-box;
-  padding: 4px 0 0 0;
+  padding: 4px 0 0 35px;
   min-width: 400px;
+  max-width: 525px;
 
 
   @media (max-width: $vp-1023) {
@@ -43,6 +43,13 @@
     grid-column: 1 / 2;
     align-self: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
   }
 }
 
@@ -101,11 +108,17 @@
     grid-column: 2 / 3;
     display: block;
     justify-self: end;
-    width: 44px;
+    width: 100%;
     padding: 22px 22px;
     border: none;
     cursor: pointer;
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
   }
 }
 

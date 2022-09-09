@@ -33,6 +33,13 @@
     grid-column: 1 / 2;
     align-self: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
   }
 }
 
@@ -100,11 +107,17 @@
     grid-column: 2 / 3;
     display: block;
     justify-self: end;
-    width: 44px;
+    width: 100%;
     padding: 22px 22px;
     border: none;
     cursor: pointer;
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
   }
 }
 

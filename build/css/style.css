@@ -536,6 +536,7 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: default;
 }
 
 .page-header__list {
@@ -1281,7 +1282,7 @@ a {
   flex-direction: column;
 }
 
-.socials__logo {
+.socials__wrapper img {
   margin-bottom: 25px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1292,6 +1293,7 @@ a {
 .socials__list {
   margin: 0;
   padding: 0;
+  max-width: 270px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1331,13 +1333,11 @@ a {
 
 .navigation__wrapper {
   position: relative;
-  -webkit-transform: translateX(35px);
-  -ms-transform: translateX(35px);
-  transform: translateX(35px);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 4px 0 0 0;
+  padding: 4px 0 0 35px;
   min-width: 400px;
+  max-width: 525px;
 }
 
 .navigation__wrapper h2 {
@@ -2428,7 +2428,7 @@ a {
     flex-direction: column;
   }
 
-  .socials__logo {
+  .socials__wrapper img {
     margin-bottom: 20px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2464,6 +2464,13 @@ a {
     -ms-grid-row-align: center;
     align-self: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
+  }
+
+  .navigation__wrapper h2:hover,
+  .navigation__wrapper h2:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   .navigation__list {
@@ -2491,11 +2498,17 @@ a {
     display: block;
     -ms-grid-column-align: end;
     justify-self: end;
-    width: 44px;
+    width: 100%;
     padding: 22px 22px;
     border: none;
     cursor: pointer;
     background-color: transparent;
+  }
+
+  .navigation__toggle:hover,
+  .navigation__toggle:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   .navigation.is-closed .navigation__wrapper .navigation__toggle::before,
@@ -2565,6 +2578,13 @@ a {
     -ms-grid-row-align: center;
     align-self: center;
     letter-spacing: 0.7px;
+    cursor: pointer;
+  }
+
+  .footer-contacts__wrapper h2:hover,
+  .footer-contacts__wrapper h2:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   .footer-contacts__contacts {
@@ -2599,11 +2619,17 @@ a {
     display: block;
     -ms-grid-column-align: end;
     justify-self: end;
-    width: 44px;
+    width: 100%;
     padding: 22px 22px;
     border: none;
     cursor: pointer;
     background-color: transparent;
+  }
+
+  .footer-contacts__toggle:hover,
+  .footer-contacts__toggle:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   .footer-contacts.is-closed .footer-contacts__wrapper .footer-contacts__toggle::before,
